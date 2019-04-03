@@ -1,6 +1,5 @@
 package step;
 
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
@@ -21,12 +20,6 @@ public class HomePageStepDef {
         this.cartPage = cartPage;
     }
 
-    @Given("^The homepage is displayed$")
-    public void theHomepageIsDisplayed() {
-        homepage.navToHomePage();
-        String storeTitle = driver.getTitle();
-        Assert.assertEquals("My Store", storeTitle);
-    }
 
     @Then("^Page should display (\\d+) categories in  menu$")
     public void pageShouldDisplayCategoriesInMenu(int count) {
